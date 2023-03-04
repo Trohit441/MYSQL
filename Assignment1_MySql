@@ -28,6 +28,14 @@ owners.
 
 Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
 
+mysql> create database Student;
+Query OK, 1 row affected (0.09 sec)
+
+mysql> use Student
+Database changed
+mysql> create table tb1Parents(Parent_id Primary key int,Parent_Name varchar(20),City varchar(20),Age int,Annual_Income int,Occupation varchar(30),EmailId varchar(25));
+Query OK, 0 rows affected (0.21 sec)
+
 mysql> use Student
 Database changed
 mysql> select * from tb1parent;
