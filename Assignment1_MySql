@@ -1,0 +1,140 @@
+1.	create a table named tblParents in Student schema, the Create table definition will be as following(minimum 20 entry is required )
+•	parent id
+•	parents name
+•	city
+•	age
+•	annual income
+•	occupation
+•	emailid
+2.	update email id of each parents as “NA”.
+3.	count number of parents whose annual income is more than 6 lakhs.
+4.	Select parents who are living in city Ahmedabad, Delhi, Mumbai, Chennai, Banglore.
+5.	Write a SQL statement to select parent whose annual income is less than 5 lakhs other
+5.	Write a SQL statement to select parent whose annual income is less than 5 lakhs otherwise age is more than 45.
+6.	Create student table with studentid, student name, Maths, science marks, parent id here parent id is foreign key and make connected with parents table using primary key & foreign key
+
+****************ANSWER************************
+
+Enter password: ***********
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 52
+Server version: 8.0.32 MySQL Community Server - GPL
+
+Copyright (c) 2000, 2023, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> use Student
+Database changed
+mysql> select * from tb1parent;
++-----------+-------------+-------------+------+---------------+---------------+--------------------+
+| Parent_id | Parent_Name | City        | Age  | Annual_Income | Ocupation     | Email_id           |
++-----------+-------------+-------------+------+---------------+---------------+--------------------+
+|         1 | Rohit       | Mumbai      |   35 |        320000 | Java_Devloper | rohit441@gmail.com |
+|         2 | Atharv      | Chennai     |   32 |        350000 | DB_Devloper   | AT25@gmail.com     |
+|         3 | Lisa        | Ahemdabad   |   47 |        600000 | DB_Consultant | lisa45@gmail.com   |
+|         4 | Kartik      | Tamil Naidu |   44 |        400000 | Teacher       | kartik65@gmail.com |
+|         5 | James       | Banglore    |   50 |        450000 | HR            | james@gmail.com    |
+|         6 | ALex        | Chennai     |   38 |        650000 | Tester        | alex2@gmail.com    |
+|         7 | Lora        | Kerla       |   41 |        700000 | Devloper      | Lora@gmail.com     |
+|         8 | Sara        | Japan       |   42 |        250000 | DB_Devloper   | sara@gmail.com     |
+|         9 | Robert      | Dubai       |   36 |        300000 | HR            | robert05@gmail.com |
+|        10 | Arthur      | USA         |   44 |        500000 | Doctor        | arthur@gmail.com   |
+|        11 | Sham        | UK          |   48 |        357000 | Devloper      | sham45@gmail.com   |
+|        12 | Jay         | Chaina      |   39 |        600000 | DB_Consultant | jayy5@gmail.com    |
+|        13 | Anu         | Tamil Naidu |   44 |        400000 | Teacher       | anuu@gmail.com     |
+|        14 | Jolly       | Pune        |   40 |        450000 | HR            | jol@gmail.com      |
+|        15 | Aniket      | Pune        |   38 |        650000 | Tester        | Aniii@gmail.com    |
+|        16 | Rita        | Kerla       |   42 |        700000 | Devloper      | ritu@gmail.com     |
+|        17 | Piu         | Japan       |   42 |        250000 | DB_Devloper   | Piuu@gmail.com     |
+|        18 | Lex         | Russia      |   33 |        300000 | HR            | lexx05@gmail.com   |
+|        19 | Rohan       | Dubai       |   44 |        500000 | Doctor        | Roni@gmail.com     |
+|        20 | Jiya        | Brazzil     |   32 |        350000 | Devloper      | jiya65@gmail.com   |
++-----------+-------------+-------------+------+---------------+---------------+--------------------+
+20 rows in set (0.00 sec)
+
+mysql> update tb1parent set Email_id="NA";
+Query OK, 20 rows affected (0.34 sec)
+Rows matched: 20  Changed: 20  Warnings: 0
+
+mysql> select * from tb1parent;
++-----------+-------------+-------------+------+---------------+---------------+----------+
+| Parent_id | Parent_Name | City        | Age  | Annual_Income | Ocupation     | Email_id |
++-----------+-------------+-------------+------+---------------+---------------+----------+
+|         1 | Rohit       | Mumbai      |   35 |        320000 | Java_Devloper | NA       |
+|         2 | Atharv      | Chennai     |   32 |        350000 | DB_Devloper   | NA       |
+|         3 | Lisa        | Ahemdabad   |   47 |        600000 | DB_Consultant | NA       |
+|         4 | Kartik      | Tamil Naidu |   44 |        400000 | Teacher       | NA       |
+|         5 | James       | Banglore    |   50 |        450000 | HR            | NA       |
+|         6 | ALex        | Chennai     |   38 |        650000 | Tester        | NA       |
+|         7 | Lora        | Kerla       |   41 |        700000 | Devloper      | NA       |
+|         8 | Sara        | Japan       |   42 |        250000 | DB_Devloper   | NA       |
+|         9 | Robert      | Dubai       |   36 |        300000 | HR            | NA       |
+|        10 | Arthur      | USA         |   44 |        500000 | Doctor        | NA       |
+|        11 | Sham        | UK          |   48 |        357000 | Devloper      | NA       |
+|        12 | Jay         | Chaina      |   39 |        600000 | DB_Consultant | NA       |
+|        13 | Anu         | Tamil Naidu |   44 |        400000 | Teacher       | NA       |
+|        14 | Jolly       | Pune        |   40 |        450000 | HR            | NA       |
+|        15 | Aniket      | Pune        |   38 |        650000 | Tester        | NA       |
+|        16 | Rita        | Kerla       |   42 |        700000 | Devloper      | NA       |
+|        17 | Piu         | Japan       |   42 |        250000 | DB_Devloper   | NA       |
+|        18 | Lex         | Russia      |   33 |        300000 | HR            | NA       |
+|        19 | Rohan       | Dubai       |   44 |        500000 | Doctor        | NA       |
+|        20 | Jiya        | Brazzil     |   32 |        350000 | Devloper      | NA       |
++-----------+-------------+-------------+------+---------------+---------------+----------+
+20 rows in set (0.00 sec)
+
+mysql> select count(Parent_id) from tb1parent where Annual_Income>500000;
++------------------+
+| count(Parent_id) |
++------------------+
+|                6 |
++------------------+
+1 row in set (0.17 sec)
+
+mysql> select Parent_Name from tb1parent where City="'Mumbai','Ahemdabad','Delhi','Chennai','Banglore'";
+Empty set (0.00 sec)
+
+mysql> select Parent_Name from tb1parent where Annual_Income<500000 || Age>45;
++-------------+
+| Parent_Name |
++-------------+
+| Rohit       |
+| Atharv      |
+| Lisa        |
+| Kartik      |
+| James       |
+| Sara        |
+| Robert      |
+| Sham        |
+| Anu         |
+| Jolly       |
+| Piu         |
+| Lex         |
+| Jiya        |
++-------------+
+13 rows in set, 1 warning (0.00 sec)
+
+mysql> create table tb2student (Student_ID int not null auto increment primary key,Student_Name varchar(25),Math int,Science int,pid int,foreign key(pid) references tb1parent(Parent_id));
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'auto increment primary key,Student_Name varchar(25),Math int,Science int,pid int' at line 1
+mysql> create table tb2student (Student_ID int not null auto_increment primary key,Student_Name varchar(25),Math int,Science int,pid int,foreign key(pid) references tb1parent(Parent_id));
+Query OK, 0 rows affected (0.38 sec)
+
+mysql> use tb2student
+ERROR 1049 (42000): Unknown database 'tb2student'
+mysql> insert into tb2student (Student_ID,Student_Name,Math,Science,pid) values (101,'James',75,85,5),(102,'Nick',78,65,8);
+Query OK, 2 rows affected (0.16 sec)
+Records: 2  Duplicates: 0  Warnings: 0
+
+mysql> select * from tb2student;
++------------+--------------+------+---------+------+
+| Student_ID | Student_Name | Math | Science | pid  |
++------------+--------------+------+---------+------+
+|        101 | James        |   75 |      85 |    5 |
+|        102 | Nick         |   78 |      65 |    8 |
++------------+--------------+------+---------+------+
+2 rows in set (0.00 sec)
